@@ -15,7 +15,7 @@ def close_db(error):
     storage.close()
 
 
-@app.route('/3-hbnb', strict_slashes=False)
+@app.route('/4-hbnb', strict_slashes=False)
 def hbnb():
     """ main page to hbnb! """
     states = storage.all(State).values()
@@ -31,12 +31,11 @@ def hbnb():
     places = storage.all(Place).values()
     places = sorted(places, key=lambda k: k.name)
 
-    return render_template('3-hbnb.html',
+    return render_template('4-hbnb.html',
                            states=state_list,
                            amenities=amenities,
                            places=places,
                            cache_id=uuid.uuid4())
-
 
 if __name__ == "__main__":
     """ Main Function """
