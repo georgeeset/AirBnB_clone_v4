@@ -20,7 +20,7 @@ $(document).ready(function () {
     }
   });
 
-  ip_addr = '172.17.129.62:5001';
+  ip_addr = '0.0.0.0:5001';
   data = $.get('http://' + ip_addr + '/api/v1/status', function (data, status) {
     console.log(data);
     if (data.status === 'OK') {
