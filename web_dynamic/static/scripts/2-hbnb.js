@@ -14,13 +14,13 @@ $(document).ready(function () {
       });
       
       if (Object.values(amenities_data).length > 0) {
-        $('.amenities h4').text(Object.values(amens).join(', '));
+        $('.amenities h4').text(Object.values(amenities_data).join(', '));
       } else {
         $('.amenities h4').html('&nbsp');
       }
     });
 
-    $.get('http://172.17.129.62:5001/api/v1/status/', function (data, status) {
+    data = $.get('http://172.17.129.62:5001/api/v1/status/', function (data, status) {
     console.log(data);
     if (data.status === 'OK') {
         $('DIV#api_status').addClass('available');

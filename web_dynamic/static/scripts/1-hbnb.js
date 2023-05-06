@@ -12,7 +12,7 @@ $(document).ready(function () {
       });
       
       if (Object.values(amenities_data).length > 0) {
-        $('.amenities h4').text(Object.values(amens).join(', '));
+        $('.amenities h4').text(Object.values(amenities_data).join(', '));
       } else {
         $('.amenities h4').html('&nbsp');
       }
